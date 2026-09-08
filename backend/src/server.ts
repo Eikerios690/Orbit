@@ -1,7 +1,12 @@
-import app from "./app";
+import express from 'express';
+import routes from './routes';
 
-const PORT = 3000;
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+app.use('/api', routes);
 
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor iniciado em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
