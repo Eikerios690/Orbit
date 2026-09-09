@@ -1,0 +1,13 @@
+### Buscar todos os usuários
+GET http://localhost:3000/api/usuarios
+
+###
+### Criar um novo usuário
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Mariana Lima",
+  "email": "mariana@empresa.com",
+  "cargo": "Designer UX"
+}
